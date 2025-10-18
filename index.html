@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI在新藥研發與生命科學的應用</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 設定字體為 Inter (系統預設字體) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        /* 調整 max-height 以容納詳細的藥物資訊 */
+        .accordion-content.open {
+            max-height: 2000px; 
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        /* 自定義樣式來區分區塊 */
+        .sub-header {
+            border-left: 4px solid #3b82f6; /* 藍色左邊界 */
+            padding-left: 0.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <!-- 主標題卡片 -->
+    <header class="bg-indigo-600 text-white rounded-xl shadow-2xl p-6 mb-8 text-center">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            🔬 AI賦能：新藥研發與<br>生命科學的革命
+        </h1>
+        <p class="mt-2 text-indigo-200 text-lg">
+            從分子設計到精準醫療，AI正在重塑整個<br>產業鏈。
+        </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+        
+        <!-- 應用分類：新藥研發 (Drug R&D) -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-indigo-400 pb-2">
+                1. AI在新藥研發 (Drug R&D) 上的主要應用
+            </h2>
+            
+            <div id="drug-rd-accordion">
+                <!-- 應用項目 1: 靶點識別與驗證 (Target ID & Validation) -->
+                <div class="bg-white rounded-lg shadow-md mb-3">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-semibold text-lg text-indigo-700 hover:bg-indigo-50 transition duration-150 rounded-lg focus:outline-none" data-target="target-id">
+                        靶點識別與驗證 (Target ID & Validation)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="target-id" class="accordion-content px-4 bg-gray-50 rounded-b-lg">
+                        <p class="text-gray-600">AI 分析海量的基因組學、蛋白質組學和臨床數據，快速識別與疾病（如癌症、失智症）相關的潛在生物靶點，顯著縮短早期探索時間，幫助科學家專注於最有希望的方向。</p>
+                    </div>
+                </div>
+
+                <!-- 應用項目 2: 藥物分子設計與優化 (Molecule Design & Optimization) -->
+                <div class="bg-white rounded-lg shadow-md mb-3">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-semibold text-lg text-indigo-700 hover:bg-indigo-50 transition duration-150 rounded-lg focus:outline-none" data-target="molecule-design">
+                        藥物分子設計與優化 (Molecule Design & Optimization)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="molecule-design" class="accordion-content px-4 bg-gray-50 rounded-b-lg">
+                        <p class="text-gray-600">生成式 AI 模型能設計全新的、具有期望特性的分子結構（例如高活性、低毒性），並預測其與靶點的結合親和力，極大地加速先導化合物的篩選過程。</p>
+                    </div>
+                </div>
+                
+                <!-- 核心新增項目：藥物再利用與虛擬篩選案例 (Silmitasertib) -->
+                <div class="bg-white rounded-lg shadow-xl mb-3 border-l-4 border-yellow-500">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-bold text-lg text-red-700 bg-yellow-100/50 hover:bg-yellow-100 transition duration-150 rounded-lg focus:outline-none" data-target="silmitasertib-case">
+                        💡 案例詳解：AI虛擬篩選與 Silmitasertib (CX-4945)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="silmitasertib-case" class="accordion-content px-4 bg-yellow-50 rounded-b-lg text-sm">
+                        
+                        <h3 class="text-lg font-extrabold text-red-700 mt-2 mb-3">
+                            【簡化說明】 AI 發現藥物新用途：Silmitasertib
+                        </h3>
+                        
+                        <!-- 1. AI 連結與核心機制 -->
+                        <div class="p-3 bg-yellow-200/60 rounded-lg mb-4 border-l-4 border-yellow-700">
+                            <p class="font-bold text-gray-800 mb-1">AI 角色：藥物再利用與虛擬篩選</p>
+                            <p class="text-gray-700">
+                                AI 模型透過大規模**虛擬篩選**，從現有藥物中識別出 Silmitasertib，發現其具備<span class="font-semibold text-red-700">調控免疫反應（如MHC-I抗原呈現）</span>的新功能，加速了藥物重新定位的過程。
+                            </p>
+                        </div>
+
+                        <!-- 2. 基本資訊 -->
+                        <h4 class="text-base text-gray-800 sub-header bg-blue-100 rounded-sm">
+                            基本機制與用途
+                        </h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><strong class="text-blue-600">作用機制：</strong> 抑制 CK2 激酶活性，CK2 在癌細胞的生長與存活中扮演關鍵角色。</li>
+                            <li><strong class="text-blue-600">雙重功能：</strong> 阻斷癌細胞生存訊號 <span class="font-bold">+</span> 潛在增強免疫系統辨識腫瘤的能力。</li>
+                            <li><strong class="text-blue-600">主要用途：</strong> 研究用於多種實體瘤與血液腫瘤（如膽管癌、髓母細胞瘤、多發性骨髓瘤）。</li>
+                        </ul>
+
+                        <!-- 3. 研究亮點與進展 -->
+                        <h4 class="text-base text-gray-800 sub-header bg-blue-100 rounded-sm">
+                            前臨床與臨床進展
+                        </h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><strong class="text-purple-600">協同增效：</strong> 前臨床證明能與傳統化療藥物協同作用，共同對抗腫瘤。</li>
+                            <li><strong class="text-purple-600">臨床狀態：</strong> 已進入針對基底細胞癌（BCC, Phase I 擴展）、復發髓母細胞瘤（Phase I/II）等多項癌症的臨床試驗。</li>
+                        </ul>
+
+                        <!-- 4. 挑戰 -->
+                        <h4 class="text-base text-gray-800 sub-header bg-blue-100 rounded-sm">
+                            主要挑戰
+                        </h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><strong class="text-red-600">選擇性問題：</strong> 需解決對非 CK2 靶點的抑制，減少離靶效應。</li>
+                            <li><strong class="text-red-600">精準用藥：</strong> 需找到準確的生物標記，篩選出最能從 CK2 抑制中受益的病人。</li>
+                            <li><strong class="text-red-600">劑量安全：</strong> 在臨床試驗中確定最大耐受劑量與最佳安全劑量仍是首要任務。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 應用項目 5: 臨床試驗優化 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-semibold text-lg text-indigo-700 hover:bg-indigo-50 transition duration-150 rounded-lg focus:outline-none" data-target="clinical-trials">
+                        臨床試驗優化 (Clinical Trial Optimization)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="clinical-trials" class="accordion-content px-4 bg-gray-50 rounded-b-lg">
+                        <p class="text-gray-600">AI 協助分析病患數據，篩選出最適合參與試驗的群體，預測試驗成功率，並優化試驗中心設置，從而提高試驗效率、降低成本，並更快將藥物推向市場。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 應用分類：其他相關發展 (Other Related Developments) -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-indigo-400 pb-2">
+                2. 其他相關的重大 AI 發展
+            </h2>
+
+            <div id="other-ai-accordion">
+                <!-- 發展項目 1: 個體化醫療 -->
+                <div class="bg-white rounded-lg shadow-md mb-3">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-semibold text-lg text-green-700 hover:bg-green-50 transition duration-150 rounded-lg focus:outline-none" data-target="personalized-medicine">
+                        個體化醫療與伴隨式診斷 (Personalized Medicine)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="personalized-medicine" class="accordion-content px-4 bg-gray-50 rounded-b-lg">
+                        <p class="text-gray-600">AI 透過分析個人的基因、病歷、生活方式與環境數據，能精準預測對特定藥物的反應或疾病風險，實現「一人一方」的精準治療，是未來醫療的核心方向。</p>
+                    </div>
+                </div>
+
+                <!-- 發展項目 2: 醫學影像分析與診斷 -->
+                <div class="bg-white rounded-lg shadow-md mb-3">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-semibold text-lg text-green-700 hover:bg-green-50 transition duration-150 rounded-lg focus:outline-none" data-target="medical-imaging">
+                        醫學影像分析與診斷 (Medical Imaging Diagnosis)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="medical-imaging" class="accordion-content px-4 bg-gray-50 rounded-b-lg">
+                        <p class="text-gray-600">深度學習模型在 X 光片、CT、MRI 等醫學影像上，能自動、快速地檢測出極微小的疾病跡象（如早期腫瘤、視網膜病變），其準確度有時甚至超越人類專家，成為醫生的強力輔助工具。</p>
+                    </div>
+                </div>
+
+                <!-- 發展項目 3: 蛋白質結構預測 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 text-left font-semibold text-lg text-green-700 hover:bg-green-50 transition duration-150 rounded-lg focus:outline-none" data-target="protein-folding">
+                        蛋白質結構預測 (Protein Structure Prediction)
+                        <span class="arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div id="protein-folding" class="accordion-content px-4 bg-gray-50 rounded-b-lg">
+                        <p class="text-gray-600">以 Google DeepMind 的 **AlphaFold** 為代表的 AI 工具，能夠高精度預測蛋白質的三維結構。這項突破是理解生物功能和加速新藥設計的基石，因為藥物必須與這些結構準確結合才能發揮作用。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-10 pt-4 border-t border-gray-300 text-center text-sm text-gray-500">
+            數據與生命科學的融合，正在開創一個更健康、更精準的未來。
+        </footer>
+
+    </main>
+
+    <!-- JavaScript for Accordion Interactivity -->
+    <script>
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                const arrow = button.querySelector('.arrow');
+
+                // Close all other open items in the same group (optional, but cleaner UX)
+                const parent = button.closest('section').querySelector('div[id$="-accordion"]');
+                parent.querySelectorAll('.accordion-toggle').forEach(otherButton => {
+                    const otherTargetId = otherButton.getAttribute('data-target');
+                    if (otherTargetId !== targetId) {
+                        const otherContent = document.getElementById(otherTargetId);
+                        const otherArrow = otherButton.querySelector('.arrow');
+                        otherContent.classList.remove('open');
+                        otherArrow.classList.remove('rotate-180');
+                    }
+                });
+
+
+                // Toggle the current item
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
+                    arrow.classList.remove('rotate-180');
+                } else {
+                    content.classList.add('open');
+                    arrow.classList.add('rotate-180');
+                }
+            });
+        });
+        
+        // Open the case study item on load for better visibility of the new content
+        window.onload = () => {
+             const caseStudyToggle = document.querySelector('[data-target="silmitasertib-case"]');
+             if (caseStudyToggle) {
+                caseStudyToggle.click();
+             }
+        };
+
+    </script>
+</body>
+</html>
+
